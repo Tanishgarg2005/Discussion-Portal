@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="banner"><h1>Discussion Portal</h1></div>
+    <div class="container">
+        
+        
+        <div class="left-pane">
+            <h2>Questions</h2>
+            <!-- <input type="text" placeholder="Search Questions"> -->
+            <ul id="questionsList"></ul>
+        </div>
+        
+        <div class="right-pane">
+            
+            <div id="questionForm">
+                <h2>Welcome to Discussion Portal</h2>
+                <p>Enter a Subject and Question to get Started</p>
+                <form id="askQuestionForm">
+                    <!-- <label for="questionTitle">Subject</label> -->
+                    <input type="text" id="questionTitle" name="title" placeholder="Subject" required><br>
+                    <!-- <label for="questionText">Question</label> -->
+                    <textarea id="questionText" name="question" placeholder="Question" required></textarea><br>
+                    <button type="submit">Submit Question</button>
+                </form>
+            </div>
+            
+            <div id="questionDetails" class="hidden">
+                <h2 id="displayQuestionTitle"></h2>
+                <p id="displayQuestionText"></p>
+                <button id="resolveButton">Resolve</button>
+                <h3>Responses</h3>
+                <ul id="responsesList"></ul>
+                <h3>Submit your Response</h3>
+                <form id="responseForm">
+                    <label for="responderName">Name</label>
+                    <input type="text" id="responderName" name="name" required><br>
+                    <label for="responseText">Comment</label>
+                    <textarea id="responseText" name="comment" required></textarea><br>
+                    <button type="submit">Submit Response</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
